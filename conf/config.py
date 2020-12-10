@@ -6,7 +6,8 @@ class setConfig:
         # print("请求url为： ", url)
         return url
     def user_data(self):
-        np = {"userAccount":"17376509487","password":"lin123456"}
+        pw = input("输入密码：")
+        np = {"userAccount":"17376509487","password":pw}
         # print("用户名&密码为：", np)
 
         return np

@@ -1,8 +1,6 @@
 import requests,unittest
 import conf.config,common
 
-
-
 class loginRequest(conf.config.setConfig,unittest.TestCase):
     # 登录接口路径
     def test_url(self):
