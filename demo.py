@@ -20,7 +20,7 @@ if __name__ == '__main__':
     runner = HTMLTestRunner(stream=fp, title='test', description='执行结果')
     runner.run(discover)
     fp.close()
-
+]
 # if __name__ == '__main__':
 #      # 实例化测试套件
 #      suite = unittest.TestSuite()
