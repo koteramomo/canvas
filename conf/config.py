@@ -1,15 +1,22 @@
 import requests,unittest
 
-class setConfig:
-    def base_url(self):
-        url = 'https://iov-asset-protection.prepub.souche-inc.com/'
-        # print("请求url为： ", url)
-        return url
+class userConfig:
     def user_data(self):
         pw = input("输入密码：")
-        np = {"userAccount":"17376509487","password":pw}
-        # print("用户名&密码为：", np)
-        return np
+        user_kotera = {"userAccount":"17376509487","password":pw}
+        return user_kotera
+
+class urlConfig:
+    def base_url(self):
+        url = 'https://iov-asset-protection.prepub.souche-inc.com/'
+        return url
+
+    def login_url(self):
+        host = urlConfig.base_url(1)
+        endpoint = 'login.json'
+        url_login = ''.join([host, endpoint]) # 登录接口路径
+        return url_login
+
 
 class commonUsed:
     def case_endpoint(self):
