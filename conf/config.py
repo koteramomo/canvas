@@ -9,7 +9,6 @@ class setConfig:
         pw = input("输入密码：")
         np = {"userAccount":"17376509487","password":pw}
         # print("用户名&密码为：", np)
-
         return np
 
 class commonUsed:

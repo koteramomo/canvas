@@ -11,14 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c34c3d88-e149-44f9-ba51-6d3e5e57201e" name="默认的" comment="12.10">
-      <change beforePath="$PROJECT_DIR$/.idea/canvas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/canvas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_case/test_tab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -42,20 +52,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python 测试.Unittest in runner.py">
-    <configuration name="未命名" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="canvas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/kotera/venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.8/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runner.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -64,45 +74,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittest in runner.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="canvas" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/runner.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittest in test_login.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="canvas" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_case" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_case/test_login.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.未命名" />
-      <item itemvalue="Python 测试.Unittest in runner.py" />
-      <item itemvalue="Python 测试.Unittest in test_login.py" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python 测试.Unittest in runner.py" />
-        <item itemvalue="Python 测试.Unittest in test_login.py" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,6 +96,17 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -143,10 +125,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="bbq12.10" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607584420451">
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608087752253">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1607584420451" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1608087752253" />
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1608091183065">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1608091183065" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1608091183065">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1608091183065" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1608091183064">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1608091183064" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1608091183065">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1608091183065" />
     <state x="521" y="189" key="RollbackChangesDialog" timestamp="1607583168739">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
