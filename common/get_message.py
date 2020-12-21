@@ -1,4 +1,6 @@
+import sys
 import requests
+import json
 import unittest
 import configparser
 from conf import config
@@ -16,13 +18,42 @@ class commonUse(config.urlConfig,unittest.TestCase):
         get_data = config.userConfig.user_data(1)
         get_url = config.urlConfig.login_url(1)
         r = requests.post(get_url, get_data)
-        print(r.json())
-        get_token = r.json()['token']
-        try:
-            self.assertIn('token', r.json(), msg='登录失败')
-            print('预登陆成功，开始测试')
-            return get_token
-        except:
-            print('登录失败，中止运行')
+        jr = json.loads(r.text)
+        print(type(jr))
+        token = commonUse.find_dict( 'token', jr )
+        return token
+        # try:
+        #     self.assertIsNotNone(jr.text)
+        #     print('预登陆成功，开始测试')
+        #
+        # #     return token
+        # except:
+        #     print('登录失败，中止运行')
+        #     pass
+
+    # 在一个字典中按键查值
+    def find_dict(target, dictData, notFound='没找到'):
+        queue = [dictData]
+        while len( queue ) > 0:
+            data = queue.pop()
+            for key, value in data.items():
+                if key == target:
+                    return value
+                elif type( value ) == dict:
+                    queue.append( value )
+        return notFound
 
 
+    # 有多个同名键在字典里时，可以用这个方法
+    def find_all(target, dictData, notFound=[]):
+        queue = [dictData]
+        result = []
+        while len( queue ) > 0:
+            data = queue.pop()
+            for key, value in data.items():
+                if key == target:
+                    result.append( value )
+                elif type( value ) == dict:
+                    queue.append( value )
+        if not result: result = notFound
+        return result
