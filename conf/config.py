@@ -24,6 +24,11 @@ class urlConfig:
         url_list = ''.join([host,endpoint])
         return url_list
 
+class reqHeader:
+    def fill_header(self):
+        header = {
+
+        }
 class commonUsed:
     def case_endpoint(self):
         a = '*****'
