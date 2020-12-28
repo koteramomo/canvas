@@ -1,7 +1,8 @@
 import requests,unittest
-import conf.config,common.get_message
+from common import get_message
+from conf import config
 
-class tabListRequest(common.get_message.commonUse):
+class tabListRequest(get_message.commonUse,config.urlConfig):
     def set_url(self):
         global url_list
 
@@ -20,10 +21,13 @@ class tabListRequest(common.get_message.commonUse):
             "cs4 = 'statusListStr=400,600,500,700&pageSize=15&currentPage=1'"  # 执行中
             "cs5 = 'statusListStr=800,900,1000,1100&pageSize=15&currentPage=1'"  # 已结束
         )
-        path = conf.config.urlConfig.list_url()
+        #全部list地址
+        path = config.urlConfig.list_url(1)
         url_list = ''.join([path,tab_list[0]])
-        result = common.get_message.commonUse.login_suc(1)
-        res_list = requests.get(url=url_list)
+
+        header = get_message.commonUse.get_header(1)
+        res_list = requests.get(url=url_list,header =header)
         print( res_list.json() )
+
 
 
