@@ -13,6 +13,7 @@ from conf import config
 #         usermsg = conf.config.setConfig.user_data(1)
 #         res_login1 = requests.post(loginRequest.login_url(1), usermsg)
 
+
 class commonUse(config.urlConfig,unittest.TestCase):
     def login_suc(self):
         get_data = config.userConfig.user_data(1)
@@ -57,3 +58,8 @@ class commonUse(config.urlConfig,unittest.TestCase):
                     queue.append( value )
         if not result: result = notFound
         return result
+
+    def get_header(self):
+        token = commonUse.login_suc( 1 )
+        header = {'_security_token':token}
+        return header
