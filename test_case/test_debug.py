@@ -22,7 +22,7 @@ class loginRequest(config.userConfig,get_message.commonUse):
     # case2：正确用户名+错误密码
     def test_case2(self):
         get_token = get_message.commonUse.login_suc(1)
-        print(get_token)
+        return get_token
         # url_list = conf.config.urlConfig.list_url( 1 )
         # print(url_list)
         # dfp = {
