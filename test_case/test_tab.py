@@ -26,7 +26,7 @@ class tabListRequest(get_message.commonUse,config.urlConfig):
         url_list = ''.join([path,tab_list[0]])
 
         header = get_message.commonUse.get_header(1)
-        res_list = requests.get(url=url_list,header =header)
+        res_list = requests.get(url=url_list,header = header)
         print( res_list.json() )
 
 
