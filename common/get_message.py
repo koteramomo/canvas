@@ -14,14 +14,14 @@ from conf import config
 #         res_login1 = requests.post(loginRequest.login_url(1), usermsg)
 
 
-class commonUse(config.urlConfig,unittest.TestCase):
+class commonUse(config.urlConfig, unittest.TestCase):
     def login_suc(self):
         get_data = config.userConfig.user_data(1)
         get_url = config.urlConfig.login_url(1)
         r = requests.post(get_url, get_data)
         jr = json.loads(r.text)
         print(type(jr))
-        token = commonUse.find_dict( 'token', jr )
+        token = commonUse.find_dict('token', jr)
         return token
         # try:
         #     self.assertIsNotNone(jr.text)
@@ -35,31 +35,32 @@ class commonUse(config.urlConfig,unittest.TestCase):
     # 在一个字典中按键查值
     def find_dict(target, dictData, notFound='没找到'):
         queue = [dictData]
-        while len( queue ) > 0:
+        while len(queue) > 0:
             data = queue.pop()
             for key, value in data.items():
                 if key == target:
                     return value
-                elif type( value ) == dict:
-                    queue.append( value )
+                elif type(value) == dict:
+                    queue.append(value)
         return notFound
 
+    # 有多个同名键在字典里时查询
 
-    # 有多个同名键在字典里时，可以用这个方法
-    def find_all(target, dictData, notFound=[]):
+    def find_all(target, dictData, notFound=['无结果']):
         queue = [dictData]
         result = []
-        while len( queue ) > 0:
+        while len(queue) > 0:
             data = queue.pop()
             for key, value in data.items():
                 if key == target:
-                    result.append( value )
-                elif type( value ) == dict:
-                    queue.append( value )
-        if not result: result = notFound
+                    result.append(value)
+                elif type(value) == dict:
+                    queue.append(value)
+        if not result:
+            result = notFound
         return result
 
     def get_header(self):
-        token = commonUse.login_suc( 1 )
-        header = {'_security_token':token}
+        token = commonUse.login_suc(1)
+        header = {'_security_token': token}
         return header
